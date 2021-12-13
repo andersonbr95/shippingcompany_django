@@ -11,7 +11,7 @@ class Vendor(models.Model):
 
 class Item(models.Model):
     item_name = models.CharField(max_length=50),
-    unit_price = models.IntegerField(max_length=5),
+    unit_price = models.IntegerField(5),
     vendor = models.ForeignKey(Vendor, on_delete=models.CASCADE),
     item_description = models.CharField(max_length=100)
 
@@ -36,7 +36,7 @@ class Shipments(models.Model):
 class ShippingDetails(models.Model):
     shipment = models.ForeignKey(Shipments, on_delete=models.CASCADE),
     item = models.ForeignKey(Item, on_delete=models.CASCADE),
-    quantity = models.IntegerField(max_length=4)
+    quantity = models.IntegerField(4)
 
 
 
