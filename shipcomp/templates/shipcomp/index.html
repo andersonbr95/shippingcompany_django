@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Shipments</title>
+    </head>
+    <body>
+        {% if ship_list %}
+            <ul>
+            {% for shipment in ship_list %}
+                <li><a href="/shipments/{{ shipments.id }}/">{{ shipments.warehouse }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No Shipments available</p>
+        {% endif %}
+    </body>
+</html>

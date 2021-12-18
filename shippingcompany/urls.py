@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from shipcomp import views
+from shipcomp.views import shipments_detail_view
+
 urlpatterns = [
     path('home/', include('shipcomp.urls')),
+    path('shipments/', shipments_detail_view),
     path('admin/', admin.site.urls),
 ]

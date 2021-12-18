@@ -49,8 +49,6 @@ class Shipments(models.Model):
     #shipping_weight = models.PositiveIntegerField(default=0)
     shipping_weight = models.DecimalField(max_digits=10, decimal_places=2)
 
-    def __str__(self):
-        return self.expected_arrival_date
     def __bool__(self):
         return self.received
 
